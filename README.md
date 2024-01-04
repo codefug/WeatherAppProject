@@ -7,7 +7,7 @@
     <img src="./src/asset/image/symbol/homelogo.png" alt="Logo" width="200" height="80">
   </a>
 
-<h3 align="center">DramaProject</h3>
+<h3 align="center">WeatherAppProject</h3>
 
   <p align="center">
   Save and view your fav drama
