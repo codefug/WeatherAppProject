@@ -5,7 +5,9 @@
  * @param {*} description
  * @param {*} context
  */
-export default function getWeatherIcon(json,img,context,h1text){
+export default async function getWeatherIcon(json,img,context,h1text){
+    const imageLoaded= await function (){
     img.src = `https://openweathermap.org/img/wn/${json.list[0].weather[0].icon}@2x.png`;
-    context.textContent=`${h1text}`;
+    context.textContent=`${h1text}`;}
+    await imageLoaded;
 }

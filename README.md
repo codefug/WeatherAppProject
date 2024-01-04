@@ -112,6 +112,22 @@ Project Link: [https://codefug.github.io/todoListProject/](https://codefug.githu
     <ul>
     <li>/r/n으로 textContent안에 넣어주고 white-space:pre-line을 해주어서 공백 문자를 줄바꿈으로 처리하게 해주면 된다.</li>
     </ul>
+    <br>
+    <li>JS로 backgroundImage설정</li>
+    <ul>
+      <li>JS로 backgroundImage를 설정하려면 웹팩에서 이미지를 가져오고 그 이미지를 CSS형식에 맞춰서 즉,
+      element.style.backgroundImage=`url({imageurl})`형식을 맞춰야 이미지가 적용된다.</li>
+    </ul>
+    <li>로딩 화면 구현</li>
+    <ul>
+      <li>원래는 의미 없이 2초를 주고 로딩화면을 없애는 방식으로 만들었었는데 이제 async await을 이용해서 API로 받아온 데이터가 활용되어 이미지에 넣어지거나 아니면 아이콘 생성, 습도 온도 등을 다 바꾸게 된 후에 페이지가 열릴 수 있도록 구현하였다.</li>
+      <li>조금 더 깔끔하게 페이지가 구성되어진 것 같다.</li>
+    </ul>
+    <li>모든 함수의 문서화, 설계</li>
+    <ul>
+      <li>어떤 함수를 만들기 전에 설계를 먼저해서 어디서 재사용할 수 있을지를 계획하고 문서화하면 개발 기간을 훨씬 줄일 수 있다.</li>
+      <li>이번 프로젝트를 통해서 이러한 문서화, 설계의 중요성을 깨닫게 되었고 API를 활용하여 많은 사이트들과 소통하고 싶어졌다.</li>
+    </ul>
 </ol>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

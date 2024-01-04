@@ -8,6 +8,10 @@ html{
   background-image: url('./asset/background/night.avif');
   background-size: cover;
 }
+body{
+  margin: 0;
+  padding:0;
+}
 ::selection {
   background-color: inherit;
 }
@@ -52,7 +56,7 @@ main {
   background-color: white;
 }
 .clickButton:hover {
-  background-color: rgb(180, 180, 180);
+  background-color: rgba(180, 180, 180, 0.322) !important;
   cursor: pointer;
 }
 .todayWeather {
@@ -81,4 +85,41 @@ header {
 h3 {
   white-space: pre-line;
   padding-bottom: 100px;
+}
+footer {
+  bottom: 0;
+  color: white;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom:0;
+  left:0;
+  right:0;
+}
+#loadingbackground {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-image: radial-gradient(
+    rgb(0, 26, 255) 1%,
+    #bdf5ff 30%,
+    rgb(2, 40, 165) 70%
+  );
+  background-size: 300% 300%;
+  background-position: center;
+  animation: 2s linear 1 load;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+@keyframes load {
+  100% {
+    background-size: 100% 100%;
+    background-image: radial-gradient(
+       rgb(0, 26, 255) 1%,
+    #bdf5ff 70%,
+    );
+  }
 }
