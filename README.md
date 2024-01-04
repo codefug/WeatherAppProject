@@ -4,13 +4,18 @@
 <br />
 <div align="center">
   <a href="https://github.com/codefug/onlineShopProject">
-    <img src="./src/asset/image/symbol/homelogo.png" alt="Logo" width="200" height="80">
+    <img src="./src/asset/symbol/homelogo.jpg" alt="Logo" width="200" height="200">
   </a>
 
 <h3 align="center">WeatherAppProject</h3>
 
   <p align="center">
-  Save and view your fav drama
+    Choose The Weather<br>
+    <p>장소를 검색하고 data를 Fahrenheit, Celsius로 나타낼 수 있어야 한다.</p>
+    <p>날씨에 기반해서 배경 색상을 변경하거나 날씨를 설명하는 이미지를 추가하여 페이지 모양을 
+    변경해야 한다. Giphy api를 사용하여 적절한 날씨 관련 GIF를 찾아 표시</p>
+    <p>async/await, promise를 꼭 써야한다.</p>
+    <p>시간에 따라서 배경화면 변경, color변경, button 색깔 변경, footer만들고 loading화면 만들기</p>
   </p>
 </div>
 
@@ -96,48 +101,17 @@ Project Link: [https://codefug.github.io/todoListProject/](https://codefug.githu
 ## Acknowledgments
 
 <ol>
-    <li>이번 프로젝트의 중점은 localstorage 지식 습득과 함수형 프로그래밍에 대해서, 객체 지향성을 생각하면서 효율적으로 확장성 있게 구현하는 것이다.</li>
-    <br>
-    <li>loading</li>
-      <ul>
-        <li>window의 onload event를 이용하여 loading화면을 구현하였다.</li>
-      </ul>
-    <br>
-    <li>storage</li>
+    <li>Open Weather api를 적용시키는 과정</li>
     <ul>
-        <li>storage에는 CRUD 기능이 다 존재하며 storage.js라는 파일에 object형식(todo card)이든 string형식(tab)이든 상관없이 storage CRUD기능을 구현하는 것이 목표였다.</li>
-        <li>localSorage에는 JS형식으로 파일이 들어가기 때문에 JS.parse() 나 JS.stringify()을 사용하여 간단하게 구현할 수도 있었다. 하지만 tab의 경우 string하나 이기 때문에 배열로 형성하여 넣는 방식이 간단하고 todo item의 경우 Object방식이기 때문에 꺼낸 후 다른 object를 넣게 되면 overwrite되는 등 문제가 발생했다.</li>
-        <ol>
-          <li>storage안의 데이터는 배열 방식으로 CRUD를 구현하여 각 object와 string을 동시에 처리할 수 있도록 하였다.</li>
-          <li>만약 object라면 추가 parameter를 통하여 다른 동작을 추가로 하도록하여 확장성을 키웠다.</li>
-        </ol>
+    <li>처음에 open weather라는 사이트의 api를 사용해서 하려고 geocoding이라는 api까지는 받아서 지역명을 받으면 위도랑 경도를 받는 로직까지는 구현을 했는데 daily관련 이 위도와 경도를 받아서 날씨를 나타내는 api가 유료라서 실패했다.</li>
+    <li>찾아보니 5일/3시간 예보자료는 무료라 그래서 했더니 되었다. 개발자가 읽는 것을 잘해야 된다는 걸 다시 한번 느낀다.</li>
+    <br>
+    <li>계속 헤매다가 결국 이름으로 입력받았을 때 위도와 경도를 알려주는 api가 이름과 중복되는 그러니깐 전세계에서 같은 이름이 나오는 5개의 리스트를 뽑게 한다는 걸 알았고 그 5개 중에 korea에 해당하는 값이 없다는 걸 확인했다. geocoding의 오류라고 판단, 더 찾아본 결과 5일/3시간 api document에 아예 이름을 받아서 꺼내는 api가 있음을 확인했고 이를 적용하여 되는 것을 확인했다.</li>
     </ul>
-    <li>tabaction</li>
-        <ul>
-            <li>+라는 기본 tab을 기준으로 그 전에 tab을 더하는 방식으로 진행된다.</li>
-            <li>
-            document.insertBefore() 함수를 이용하여 menu라는 div안에서 + 기본 tab이전에 input을 형성하게 된다.
-            </li>
-            <li>
-            input이 활성화되어 있을 때 click이나 enter를 누르게 되면 두가지 경우가 발생한다.
-            <ul>
-            <li>input이 비어있다면 input에 focus가 이동된다.</li>
-            <li>input이 채워져 있다면 tab이 형성된다.</li>
-            </ul>
-            <li>확장성을 위해 addTab이라는 초기화면에서 쓸 storage에서 value를 가져와서 tab을 만들거나 새로 만들 때 입력받은 name으로 tab을 만드는 함수를 하나가 될수 있도록 설계한다.</li>
-            </li>
-        </ul>
-    <li>todo card</li>
-        <ul>
-            <li>click된 tab을 기준(초기화면에서는 total tab을 기본으로 클릭한 것으로 간주된다.)으로 해당 type을 가진 todocard를 생성하는 함수인 sort로 관리된다.</li>
-            <li>todocard를 만드는 함수에는 DOM처리로 생성하는 것과 함께 remove button에 함수를 추가하게 되는데 이 버튼을 누르면 storage함수와 연동되어 storage에서 값을 삭제하면서 화면에서도 삭제한다.</li>
-        </ul>
-    <li>form</li>
-        <ul>
-            <li>form 설정은 dialog라는 html 요소로 생성된다.</li>
-            <li>dialog를 js로 modal방식으로 열면 dialog안의 요소들을 볼 수 있다.</li>
-            <li>file selector에서 file을 선택하면 해당 file을 FileReader라는 object을 이용하여 onload event에 event.target.result안에 있는 url을 꺼내서 file label background image에 적용시킨다.</li>
-        </ul>
+    <li>textContent를 DOM처리로 조작할 때 new line이 적용되지 않음.</li>
+    <ul>
+    <li>/r/n으로 textContent안에 넣어주고 white-space:pre-line을 해주어서 공백 문자를 줄바꿈으로 처리하게 해주면 된다.</li>
+    </ul>
 </ol>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -150,3 +124,5 @@ Project Link: [https://codefug.github.io/todoListProject/](https://codefug.githu
 [CSS3.url]: https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white
 [Webpack.url]: https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black
 [npm.url]: https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white
+
+[]

@@ -1,0 +1,84 @@
+:root {
+  --backgroundColor: black;
+}
+html{
+  margin: 0;
+  padding: 0;
+  color: white;
+  background-image: url('./asset/background/night.avif');
+  background-size: cover;
+}
+::selection {
+  background-color: inherit;
+}
+dialog {
+  width: 300px;
+  height: 200px;
+}
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.486);
+}
+.notification {
+  padding-block: 20px;
+}
+.cancelButton {
+  border-radius: 20px;
+  background-color: rgba(0, 0, 255, 0.336);
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.mainImage {
+  width: 700px;
+  padding-top: 60px;
+}
+.absoluteDescription {
+  position: absolute;
+  font-size: 2rem;
+  top: 0;
+}
+.middleside {
+  position: relative;
+}
+#inputMessage {
+  height: 3rem;
+  font-size: 2.5rem;
+}
+.clickButton {
+  height: 3rem;
+  border-radius: 1rem;
+  background-color: white;
+}
+.clickButton:hover {
+  background-color: rgb(180, 180, 180);
+  cursor: pointer;
+}
+.todayWeather {
+  font-size: 30px;
+  font-weight: bold;
+}
+.side {
+  flex: 1;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+header {
+  padding-inline: 40px;
+}
+.descriptionSection {
+}
+.after {
+  text-align: center;
+}
+.afterDescriptionContainer {
+  display: flex;
+  justify-content: space-around;
+}
+h3 {
+  white-space: pre-line;
+  padding-bottom: 100px;
+}
