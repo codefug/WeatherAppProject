@@ -1,21 +1,16 @@
-<a name="readme-top"></a>
-
+## introduction
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/codefug/onlineShopProject">
-    <img src="./src/asset/symbol/homelogo.jpg" alt="Logo" width="200" height="200">
+  <a href="https://github.com/codefug/WeatherAppProject">
+    <img src="./image-2.png" alt="Logo" width="200" height="200">
   </a>
 
 <h3 align="center">WeatherAppProject</h3>
 
   <p align="center">
     Choose The Weather<br>
-    <p>장소를 검색하고 data를 Fahrenheit, Celsius로 나타낼 수 있어야 한다.</p>
-    <p>날씨에 기반해서 배경 색상을 변경하거나 날씨를 설명하는 이미지를 추가하여 페이지 모양을 
-    변경해야 한다. Giphy api를 사용하여 적절한 날씨 관련 GIF를 찾아 표시</p>
-    <p>async/await, promise를 꼭 써야한다.</p>
-    <p>시간에 따라서 배경화면 변경, color변경, button 색깔 변경, footer만들고 loading화면 만들기</p>
+    <p>open weather API를 이용해서 비동기적으로 데이터를 저장한 후 검색한 도시의 날씨에 대한 정보를 확인할 수 있는 앱을 제작한다
   </p>
 </div>
 
@@ -30,47 +25,34 @@
       </ul>
     </li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#Experience">Acknowledgments</a></li>
   </ol>
 </details>
 
 <!-- ABOUT THE PROJECT -->
 
 ## About The Project
-
-![Alt text](image.png)
-window.onload event를 이용한 loading 화면
-
 ![Alt text](image-1.png)
-storage에 아무것도 포함되지 않은 홈 화면
-
-![Alt text](image-2.png) +버튼을 이용해서 total 이외에도 tab을 생성할 수 있습니다.
-
-![Alt text](image-3.png)
-enter혹은 +버튼을 한번 더 누르면 tab 생성이 완료됩니다.
+로딩 화면 입니다. 비동기적으로 모든 화면 구성 요소에 대한 함수들이 끝나면 종료됩니다.
 
 ![Alt text](image-4.png)
-화면 상단의 +버튼을 누르면 form이 생성됩니다.
+메인 화면입니다. 아래에는 습도 최대 온도 최소 온도 그리고 위쪽에 이것들이 일어나는 시간을 의미합니다. 가운데 사진은 해당 날씨에 대한 랜덤한 사진이 올라가게 됩니다.
 
-![Alt text](image-5.png)
-입력하는 text는 그대로 보여지고 파일 같은 경우 파일이 해당 칸을 채우게 됩니다.
-
-![Alt text](image-6.png)
-form 생성을 완료하면 그것에 해당하는 카드를 생성합니다.
+![Alt text](image.png)
+입력창입니다. 도시 키워드를 첫 화면에서는 Korea로 설정되어 있습니다. 
 
 ![Alt text](image-7.png)
-tab을 클릭하면 tab과 type이 같은 카드만 보여지게 됩니다.
+incheon을 입력해보겠습니다.
 
-![Alt text](image-8.png)
-comic에 해당하는 위의 카드는 comic tab을 클릭하면 보여집니다.
+![Alt text](image-3.png)
+Incheon으로 설정된 것을 확인할 수 있습니다.
 
-![Alt text](image-9.png)
-card에는 priority 옆에 remove라는 버튼이 있습니다. 해당 카드만 삭제하게 됩니다.
+![Alt text](image-5.png)
+각 아이콘은 현재 날씨에 대한 아이콘을 나타냅니다. 현재는 구름이 있는 날씨입니다.
 
-![Alt text](image-10.png)
-모든 tab을 삭제할 수 있는 버튼입니다.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+![Alt text](image-2.png)
+지금은 시간이 지나게 되면 자동으로 배경화면이 밤 낮 으로 바뀌게 됩니다. 위의 사진은 밤에 일어나는 변화를 나타냅니다.
+<p align="right">(<a href="#introduction">back to top</a>)</p>
 
 ### Built With
 
@@ -81,7 +63,7 @@ card에는 priority 옆에 remove라는 버튼이 있습니다. 해당 카드만
 - ![NPM][npm.url]
 
 <p align="right">
-(<a href="#readme-top">back to top</a>)
+(<a href="#introduction">back to top</a>)
 </p>
 
 <!-- CONTACT -->
@@ -90,15 +72,15 @@ card에는 priority 옆에 remove라는 버튼이 있습니다. 해당 카드만
 
 codefug
 
-Project Link: [https://codefug.github.io/todoListProject/](https://codefug.github.io/todoListProject/)
+Project Link: [https://github.com/codefug/WeatherAppProject](https://github.com/codefug/WeatherAppProject)
 
 <p align="right">
-(<a href="#readme-top">back to top</a>)
+(<a href="#introduction">back to top</a>)
 </p>
 
 <!-- ACKNOWLEDGMENTS -->
 
-## Acknowledgments
+## Experience
 
 <ol>
     <li>Open Weather api를 적용시키는 과정</li>
@@ -130,7 +112,7 @@ Project Link: [https://codefug.github.io/todoListProject/](https://codefug.githu
     </ul>
 </ol>
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#introduction">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
@@ -140,5 +122,3 @@ Project Link: [https://codefug.github.io/todoListProject/](https://codefug.githu
 [CSS3.url]: https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white
 [Webpack.url]: https://img.shields.io/badge/webpack-%238DD6F9.svg?style=for-the-badge&logo=webpack&logoColor=black
 [npm.url]: https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white
-
-[]

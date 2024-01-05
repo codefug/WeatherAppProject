@@ -7,6 +7,7 @@ html{
   color: white;
   background-image: url('./asset/background/night.avif');
   background-size: cover;
+  height:100vh;
 }
 body{
   margin: 0;

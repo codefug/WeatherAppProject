@@ -3,6 +3,7 @@ import absoluteDescription from "./absoluteDescription";
 import getAfterWeatherIcon from "./getAfterWeatherIcon";
 import getWeatherIcon from "./getWeatherIcon";
 import callGiphy from "./giphyCall";
+import setDescription from "./setDescriptionSection";
 
 export default async function forecastWeather(q) {
   let json;
@@ -12,17 +13,19 @@ export default async function forecastWeather(q) {
       { mode: "cors" },
     );
     json = await response.json();
-    const img = document.querySelector('.headLogo');
-    const h1 = document.querySelector('h1');
-    const todayWeather = document.querySelector('.todayWeather');
-    todayWeather.textContent=`오늘 ${json.city.name}의 날씨`;
+    console.log(json);
+    const img = document.querySelector(".headLogo");
+    const h1 = document.querySelector("h1");
+    const todayWeather = document.querySelector(".todayWeather");
+    todayWeather.textContent = `오늘 ${json.city.name}의 날씨`;
+    setDescription(json);
     if (
-      Number(json.list[2].dt_txt.slice(11, 13))>=6 &&
-      Number(json.list[2].dt_txt.slice(11, 13))<=20
-    ){
-      colorChange(false)
-    }else{
-      colorChange(true)
+      Number(json.list[2].dt_txt.slice(11, 13)) >= 6 &&
+      Number(json.list[2].dt_txt.slice(11, 13)) <= 20
+    ) {
+      colorChange(false);
+    } else {
+      colorChange(true);
     }
     await getWeatherIcon(json, img, h1, json.list[0].weather[0].main);
     await getAfterWeatherIcon(json);
